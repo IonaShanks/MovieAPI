@@ -17,6 +17,8 @@ namespace MovieAPI.Models
         public String PhoneNumber { get; set; }
         public double TicketPrice { get; set; }
         public double RunTime { get; set; }
+
+        
     }
     
 }
