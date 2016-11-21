@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+using System.Collections.Generic;
+
+
 
 namespace MovieAPI.Models
 {
@@ -25,28 +24,17 @@ namespace MovieAPI.Models
     public class MovieListing
     {
         //Film ID title certification genre description running time
-        [Key, Required]
+        [Key]
         public String FilmID { get; set; }
-        [Required]
         public String Title { get; set; }
-        [Required]
         public Certification Certification { get; set; }
-        [Required]
         public String Genre { get; set; }
         public String Description { get; set; }
-        [Required]
-        // Minutes
         public double RunTime { get; set; }
 
+        public virtual List<Cinema> Cinemas { get; set; }
+
     }
 
-    public class MovieContext : DbContext
-    {
-        public MovieContext() : base("MovieListing")
-        {
 
-        }
-        public DbSet<MovieListing> Listings { get; set; }
-        //public DbSet<Cinema> Cinemas { get; set; }
-    }
 }

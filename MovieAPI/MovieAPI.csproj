@@ -145,7 +145,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611172017170_InitialCreate.cs" />
+    <Compile Include="Migrations\201611172017170_InitialCreate.Designer.cs">
+      <DependentUpon>201611172017170_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611211613330_AddUrl.cs" />
+    <Compile Include="Migrations\201611211613330_AddUrl.Designer.cs">
+      <DependentUpon>201611211613330_AddUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cinema.cs" />
+    <Compile Include="Models\Context.cs" />
     <Compile Include="Models\MovieListing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -161,6 +171,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611172017170_InitialCreate.resx">
+      <DependentUpon>201611172017170_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211613330_AddUrl.resx">
+      <DependentUpon>201611211613330_AddUrl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
