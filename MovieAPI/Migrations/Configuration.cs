@@ -5,7 +5,7 @@ namespace MovieAPI.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MovieAPI.Models.MovieContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MovieModel.MovieContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace MovieAPI.Migrations
             ContextKey = "MovieAPI.Models.MovieContext";
         }
 
-        protected override void Seed(MovieAPI.Models.MovieContext context)
+        protected override void Seed(MovieModel.MovieContext context)
         {
             //  This method will be called after migrating to the latest version.
 
