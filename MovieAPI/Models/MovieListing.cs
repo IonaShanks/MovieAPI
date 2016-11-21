@@ -24,12 +24,17 @@ namespace MovieAPI.Models
     public class MovieListing
     {
         //Film ID title certification genre description running time
-        [Key]
+        [Key, Required]
         public String FilmID { get; set; }
+        [Required]
         public String Title { get; set; }
+        [Required]
         public Certification Certification { get; set; }
+        [Required]
         public String Genre { get; set; }
         public String Description { get; set; }
+        [Required]
+        // Minutes
         public double RunTime { get; set; }
 
         public virtual List<Cinema> Cinemas { get; set; }
