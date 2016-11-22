@@ -8,7 +8,7 @@ using MovieModel;
 
 namespace MovieAPI.Controllers
 {
-    //test
+    
     public class CinemaController : ApiController
     {
         private MovieContext db = new MovieContext();
