@@ -130,7 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -143,24 +145,16 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CinemaController.cs" />
     <Compile Include="Controllers\CinemasController.cs" />
-    <Compile Include="Controllers\MovieListingController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611172017170_InitialCreate.cs" />
-    <Compile Include="Migrations\201611172017170_InitialCreate.Designer.cs">
-      <DependentUpon>201611172017170_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611211613330_AddUrl.cs" />
-    <Compile Include="Migrations\201611211613330_AddUrl.Designer.cs">
-      <DependentUpon>201611211613330_AddUrl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="apiapp.json" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <None Include="Properties\PublishProfiles\SNISMovieAPI.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -170,14 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611172017170_InitialCreate.resx">
-      <DependentUpon>201611172017170_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611211613330_AddUrl.resx">
-      <DependentUpon>201611211613330_AddUrl.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\MovieModel\MovieModel\MovieModel.csproj">
